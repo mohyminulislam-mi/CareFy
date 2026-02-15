@@ -51,11 +51,11 @@ const Header = () => {
       <Link href="/" className="text-gray-700 hover:text-blue-600">
         Home
       </Link>
-      <Link href="/products" className="text-gray-700 hover:text-blue-600">
-        Items
+      <Link href="/services" className="text-gray-700 hover:text-blue-600">
+        Services
       </Link>
-      <Link href="/add-products" className="text-gray-700 hover:text-blue-600">
-        Add Items
+      <Link href="/booking" className="text-gray-700 hover:text-blue-600">
+        Booking
       </Link>
     </>
   );
@@ -79,23 +79,13 @@ const Header = () => {
 
           <nav className="hidden md:flex items-center space-x-6">
             {menus}
-            <button className="relative">
-              <Heart className="h-6 w-6 text-gray-700 hover:text-blue-600" />
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                2
-              </span>
-            </button>
-            <button className="relative">
-              <ShoppingCart className="h-6 w-6 text-gray-700 hover:text-blue-600" />
-              <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                3
-              </span>
-            </button>
             <div>
               {user ? (
                 <div className="flex items-center gap-3">
                   <div className="relative">
-                    <img
+                    <Image
+                      width={40}
+                      height={15}
                       className="h-12 w-12 rounded-full"
                       src={user.image}
                       alt="user"
