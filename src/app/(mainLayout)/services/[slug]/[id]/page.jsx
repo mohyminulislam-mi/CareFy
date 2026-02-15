@@ -98,7 +98,7 @@ const BookingPage = ({ params }) => {
       ...formData,
       totalCost,
     });
-    router.push("/my-bookings");
+    router.push("/my-booking");
   };
 
   return (
@@ -220,7 +220,7 @@ const BookingPage = ({ params }) => {
 
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold hover:bg-indigo-700 transition"
+              className="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold hover:bg-indigo-700 transition cursor-pointer"
             >
               Confirm & Book Now
             </button>
