@@ -3,12 +3,12 @@ import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Move the data OUTSIDE the component or define it BEFORE using it
 const services = [
   {
     id: "1",
     type: "baby",
     title: "Baby Care & Sitting",
+    slug: "Baby-Care-and-Sitting",
     description: "Expert care for your little ones when you are away.",
     longDescription:
       "Our baby care specialists are trained in early childhood development and safety. Whether you need a few hours of help or full-day care, we provide a nurturing environment for your children.",
@@ -26,6 +26,7 @@ const services = [
     id: "2",
     type: "elderly",
     title: "Elderly Care",
+    slug: "Elderly-Care",
     description: "Compassionate assistance for our respected seniors.",
     longDescription:
       "Dignified and professional care for elderly family members. We assist with daily living activities, medication reminders, and companionship to ensure a high quality of life.",
@@ -43,6 +44,7 @@ const services = [
     id: "3",
     type: "sick",
     title: "Sick People Service",
+    slug: "Sick-People-Service",
     description: "Specialized home care for recovery and health support.",
     longDescription:
       "Recovering from illness or surgery requires special attention. Our trained caregivers provide the medical support and daily care needed to facilitate a smooth recovery at home.",
@@ -59,9 +61,9 @@ const services = [
 ];
 
 const ServiceDetailPage = async ({ params }) => {
-  // Await params if using Next.js 15
-  const { id } = await params;
-  const service = services.find((s) => s.id === id);
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
+  console.log("slug", slug);
 
   if (!service) {
     return (
@@ -125,7 +127,7 @@ const ServiceDetailPage = async ({ params }) => {
                 </p>
               </div>
               <Link
-                href={`/booking/${service.id}`}
+                href={`/services/${slug}/${service.id}`}
                 className="w-full sm:w-auto bg-indigo-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition shadow-lg shadow-indigo-100 text-center"
               >
                 Book This Service

@@ -9,6 +9,7 @@ const Services = () => {
       id: "1",
       type: "baby",
       title: "Baby Care & Sitting",
+      slug: "Baby-Care-and-Sitting",
       description: "Expert care for your little ones when you are away.",
       longDescription:
         "Our baby care specialists are trained in early childhood development and safety. Whether you need a few hours of help or full-day care, we provide a nurturing environment for your children.",
@@ -26,6 +27,7 @@ const Services = () => {
       id: "2",
       type: "elderly",
       title: "Elderly Care",
+      slug: "Elderly-Care",
       description: "Compassionate assistance for our respected seniors.",
       longDescription:
         "Dignified and professional care for elderly family members. We assist with daily living activities, medication reminders, and companionship to ensure a high quality of life.",
@@ -43,6 +45,7 @@ const Services = () => {
       id: "3",
       type: "sick",
       title: "Sick People Service",
+      slug: "Sick-People-Service",
       description: "Specialized home care for recovery and health support.",
       longDescription:
         "Recovering from illness or surgery requires special attention. Our trained caregivers provide the medical support and daily care needed to facilitate a smooth recovery at home.",
@@ -100,7 +103,7 @@ const Services = () => {
                   </span>
                 </span>
                 <Link
-                  href={`/services/${s.id}`}
+                  href={`/services/${s.slug}`}
                   className="text-indigo-600 font-semibold text-sm flex items-center hover:translate-x-1 transition"
                 >
                   Learn More <ArrowRight className="ml-1 w-4 h-4" />

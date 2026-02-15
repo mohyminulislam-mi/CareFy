@@ -18,50 +18,51 @@ const Footer = () => {
       <div className="max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center mb-4">
               <Logo />
             </Link>
             <p className="text-gray-400 mb-4">
-              Nexfy a modern E-com platform. Save your time , Buy quality
-              products. hassle free shopping!
+              Connect with verified, professional caregivers. From childcare to
+              specialized elderly support, we make caregiving easy, secure, and
+              accessible for every family.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-blue-400 transition">
+              <Link href="#" className="hover:text-blue-400 transition">
                 <Facebook />
-              </a>
-              <a href="#" className="hover:text-blue-400 transition">
+              </Link>
+              <Link href="#" className="hover:text-blue-400 transition">
                 <Youtube />
-              </a>
-              <a href="#" className="hover:text-blue-400 transition">
+              </Link>
+              <Link href="#" className="hover:text-blue-400 transition">
                 <Twitter />
-              </a>
-              <a href="#" className="hover:text-blue-400 transition">
+              </Link>
+              <Link href="#" className="hover:text-blue-400 transition">
                 <Linkedin />
-              </a>
+              </Link>
             </div>
           </div>
           <div>
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link href="#" className="hover:text-white transition">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link href="#" className="hover:text-white transition">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link href="#" className="hover:text-white transition">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link href="#" className="hover:text-white transition">
                   Careers
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -69,24 +70,24 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Customer Service</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition">
-                  Track Order
-                </a>
+                <Link href="#" className="hover:text-white transition">
+                  Track Booking
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link href="#" className="hover:text-white transition">
                   Returns
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
-                  Shipping Info
-                </a>
+                <Link href="#" className="hover:text-white transition">
+                  Service Info
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <Link href="#" className="hover:text-white transition">
                   FAQ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -99,7 +100,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>support@nexfy.com</span>
+                <span>support@carefy.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
@@ -111,7 +112,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
           <p>
-            &copy; 2024 NexFy. All rights reserved. | Privacy Policy | Terms of
+            &copy; 2024 CareFy. All rights reserved. | Privacy Policy | Terms of
             Service
           </p>
         </div>
