@@ -1,31 +1,77 @@
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
 
-async function getServices() {
-  const res = await fetch("/services.json", {
-    cache: "no-store",
-  });
-
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
+// Move the data OUTSIDE the component or define it BEFORE using it
+const services = [
+  {
+    id: "1",
+    type: "baby",
+    title: "Baby Care & Sitting",
+    description: "Expert care for your little ones when you are away.",
+    longDescription:
+      "Our baby care specialists are trained in early childhood development and safety. Whether you need a few hours of help or full-day care, we provide a nurturing environment for your children.",
+    hourlyRate: 15,
+    imageUrl:
+      "https://plus.unsplash.com/premium_photo-1666299880508-bffece864e96?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    features: [
+      "Age-appropriate activities",
+      "Meal preparation",
+      "Safety first approach",
+      "24/7 Availability",
+    ],
+  },
+  {
+    id: "2",
+    type: "elderly",
+    title: "Elderly Care",
+    description: "Compassionate assistance for our respected seniors.",
+    longDescription:
+      "Dignified and professional care for elderly family members. We assist with daily living activities, medication reminders, and companionship to ensure a high quality of life.",
+    hourlyRate: 20,
+    imageUrl:
+      "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1178&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    features: [
+      "Mobility assistance",
+      "Medication tracking",
+      "Social companionship",
+      "Light housekeeping",
+    ],
+  },
+  {
+    id: "3",
+    type: "sick",
+    title: "Sick People Service",
+    description: "Specialized home care for recovery and health support.",
+    longDescription:
+      "Recovering from illness or surgery requires special attention. Our trained caregivers provide the medical support and daily care needed to facilitate a smooth recovery at home.",
+    hourlyRate: 25,
+    imageUrl:
+      "https://images.unsplash.com/photo-1550792436-181701c71f63?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    features: [
+      "Vitals monitoring",
+      "Wound care support",
+      "Exercise assistance",
+      "Doctor appointment coordination",
+    ],
+  },
+];
 
 const ServiceDetailPage = async ({ params }) => {
-  const services = await getServices();
-  const service = services.find((s) => s.id === params.id);
+  // Await params if using Next.js 15
+  const { id } = await params;
+  const service = services.find((s) => s.id === id);
 
   if (!service) {
-    return <div className="text-center py-20">Service not found</div>;
+    return (
+      <div className="text-center py-20 text-2xl font-bold">
+        Service not found
+      </div>
+    );
   }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
         <div className="grid lg:grid-cols-2">
           <div className="h-full">
             <img
@@ -73,7 +119,7 @@ const ServiceDetailPage = async ({ params }) => {
               </div>
               <Link
                 href={`/booking/${service.id}`}
-                className="w-full sm:w-auto bg-indigo-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition shadow-lg shadow-indigo-100"
+                className="w-full sm:w-auto bg-indigo-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition shadow-lg shadow-indigo-100 text-center"
               >
                 Book This Service
               </Link>
