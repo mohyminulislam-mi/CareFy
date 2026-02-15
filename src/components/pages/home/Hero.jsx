@@ -29,12 +29,12 @@ const Hero = () => {
               >
                 Explore Services
               </Link>
-              <Link
+              {/* <Link
                 href="/about"
                 className="w-full sm:w-auto px-8 py-4 bg-white text-slate-800 border border-slate-200 rounded-xl font-bold text-lg hover:bg-slate-50 transition"
               >
                 How it Works
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="mt-16 lg:mt-0 relative">

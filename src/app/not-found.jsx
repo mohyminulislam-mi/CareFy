@@ -1,7 +1,7 @@
 import React from "react";
 import { Home } from "lucide-react";
 import Link from "next/link";
-import BackBtn from "@/components/button/BackBtn";
+import BackButton from "@/components/button/BackButton";
 
 const NotFound = () => {
   return (
@@ -30,7 +30,7 @@ const NotFound = () => {
           </Link>
 
           {/* Secondary Action */}
-          <BackBtn>Go back</BackBtn>
+          <BackButton>Go back</BackButton>
         </div>
 
         {/* Optional: Helpful links */}

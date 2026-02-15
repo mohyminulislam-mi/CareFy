@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 
-const BackBtn = ({ children }) => {
+const BackButton = ({ children }) => {
   const router = useRouter();
 
   const handleBack = () => {
@@ -25,4 +25,4 @@ const BackBtn = ({ children }) => {
   );
 };
 
-export default BackBtn;
+export default BackButton;

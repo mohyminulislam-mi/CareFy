@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Services = () => {
@@ -68,7 +69,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-12 lg:px-24">
+    <section id="services" className="bg-gray-50 py-20 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -100,8 +101,8 @@ const Services = () => {
               <p className="text-gray-600 leading-relaxed mb-6">
                 {service.description}
               </p>
-              <a
-                href="#"
+              <Link
+                href="/services"
                 className="inline-flex items-center text-blue-600 font-bold hover:gap-2 transition-all"
               >
                 Book Now
@@ -118,7 +119,7 @@ const Services = () => {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   ></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

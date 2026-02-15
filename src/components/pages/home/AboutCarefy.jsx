@@ -103,7 +103,7 @@ const AboutCarefy = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          {/* <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link
               href="/services"
               className="bg-blue-600 text-white px-10 py-4 rounded-lg font-bold hover:bg-black transition-all duration-300 shadow-lg shadow-blue-200"
@@ -116,7 +116,7 @@ const AboutCarefy = () => {
             >
               Join as a Carer
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

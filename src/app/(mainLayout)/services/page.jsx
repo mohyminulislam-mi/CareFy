@@ -100,7 +100,7 @@ const Services = () => {
                   </span>
                 </span>
                 <Link
-                  href={`/service/${s.id}`}
+                  href={`/services/${s.id}`}
                   className="text-indigo-600 font-semibold text-sm flex items-center hover:translate-x-1 transition"
                 >
                   Learn More <ArrowRight className="ml-1 w-4 h-4" />

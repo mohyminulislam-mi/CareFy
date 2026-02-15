@@ -1,4 +1,6 @@
+import BackText from "@/components/button/BackText";
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 // Move the data OUTSIDE the component or define it BEFORE using it
@@ -71,10 +73,15 @@ const ServiceDetailPage = async ({ params }) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mb-10">
+        <BackText>return back</BackText>
+      </div>
       <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
         <div className="grid lg:grid-cols-2">
           <div className="h-full">
-            <img
+            <Image
+              width={300}
+              height={80}
               src={service.imageUrl}
               className="w-full h-full object-cover min-h-[400px]"
               alt={service.title}
