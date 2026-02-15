@@ -111,7 +111,7 @@ const AboutCarefy = () => {
               Book a Service
             </Link>
             <Link
-              href="/services"
+              href="#services"
               className="border-2 border-black text-black px-10 py-4 rounded-lg font-bold hover:bg-black hover:text-white transition-all duration-300"
             >
               Join as a Carer
