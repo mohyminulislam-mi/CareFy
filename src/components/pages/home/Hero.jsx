@@ -1,6 +1,7 @@
-import { Sparkles } from "lucide-react";
-import Link from "next/link";
 import React from "react";
+import { Sparkles } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -38,7 +39,9 @@ const Hero = () => {
           </div>
           <div className="mt-16 lg:mt-0 relative">
             <div className="absolute -inset-4 bg-indigo-500/10 blur-3xl rounded-full"></div>
-            <img
+            <Image
+              width={400}
+              height={40}
               src="https://picsum.photos/seed/carehero/800/800"
               alt="Caregiving"
               className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover ring-8 ring-white"
